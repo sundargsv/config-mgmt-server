@@ -66,9 +66,22 @@ http://localhost:8080/config/app1?environment=dev
 
 Helm can be used for managing the deployments and manifest files while orchestrating the app in Kubernetes
 
+##### Test cases
+
+This project is covered with integration tests and unit tests and which can be easily automated tests in any CI/ CD pipelines later.
+
+```
+mvn clean test
+```
+
 ##### Docker build and Deploy
 
 ```
 docker build -f docker/Dockerfile -t config-server:latest .
 docker run -d -p 8080:8080 config-server:latest
 ```
+
+##### Helm
+
+Helm can be used for managing the deployments and manifest files while orchestrating the app in Kubernetes.
+Please find my base helm config here. (https://github.com/sundargsv/infrastructure-as-code/tree/main/nonprod-k8s/helm-sample)
