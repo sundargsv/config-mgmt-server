@@ -1,0 +1,4 @@
+storage: local
+server:
+  env: test
+  port: 8080

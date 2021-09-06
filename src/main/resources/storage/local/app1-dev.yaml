@@ -1,0 +1,4 @@
+storage: local
+server:
+  env: dev
+  port: 8080

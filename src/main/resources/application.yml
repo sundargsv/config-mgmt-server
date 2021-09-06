@@ -1,0 +1,27 @@
+project:
+  name: @project.artifactId@
+  version: @project.version@
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+
+fixedDelay:
+  in:
+    milliseconds: 120000
+
+config:
+  enabled: true
+    # initializing the config-type (GIT | LOCAL| AWS_S3| GCP_STORAGE)
+  type: GIT
+  git:
+    url: https://github.com/sundargsv/cloud-config-samples.git
+  local:
+    # while deploying as a docker container - specify the docker containers base path
+    path: src/main/resources/storage/local
+    copy:
+      # while deploying as a docker container - specify the docker containers base path
+      basePath: src/main/resources/storage/git-local-copy/
+

@@ -1,0 +1,18 @@
+project:
+  name: config-server-test
+  version: 1.0.0
+
+fixedDelay:
+  in:
+    milliseconds: 120000
+
+config:
+  enabled: true
+  # initializing the config-type (GIT | LOCAL| AWS_S3| GCP_STORAGE)
+  type: GIT
+  git:
+    url: https://github.com/sundargsv/cloud-config-samples.git
+  local:
+    path: /Users/sundarg/Desktop/my-projects/custom-config-server/local-cloud
+    copy:
+      basePath: /Users/sundarg/Desktop/my-projects/custom-config-server/
